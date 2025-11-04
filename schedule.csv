@@ -1,13 +1,12 @@
-day_label,date,activity,type,time_1,timezone_1_label,time_2,timezone_2_label
-"Day 1","July 7, 2025","Arrivals & Check-in & Breakfast","Break","7:30","MOUNTAIN","9:30","EASTERN"
-"Day 1","July 7, 2025","Welcome","other","8:00","MOUNTAIN","10:00","EASTERN"
-"Day 2","July 8, 2025","Module 2","Lecture","8:30","MOUNTAIN","10:30","EASTERN"
-"Day 3","July 8, 2025","Module 2","Lecture","8:30","MOUNTAIN","10:30","EASTERN"
-"Day 4","July 8, 2025","Module 2","Lecture","8:30","MOUNTAIN","10:30","EASTERN"
-"Day 5","July 8, 2025","Module 2","Lecture","8:30","MOUNTAIN","10:30","EASTERN"
-"Day 6","July 8, 2025","Module 2","Lecture","8:30","MOUNTAIN","10:30","EASTERN"
-"Day 7","August 12, 2025","Module 2","Lecture","8:30","MOUNTAIN","10:30","EASTERN"
-"Day 7","August 12, 2025","Welcome","other","8:00","MOUNTAIN","10:00","EASTERN"
-"Day 7","August 12, 2025","Welcome","Lecture","8:00","MOUNTAIN","10:00","EASTERN"
-
-
+"day_label,date,activity,type,time_1,timezone_1_label",,,,,,
+"November 20,2025-11-20,Zoom Opens,activity,09:45,""Time (ET)""",,,,,,
+"November 20,2025-11-20,""Welcome (Regional Coordinator)"",activity,10:00,""Time (ET)""",,,,,,
+"November 20,2025-11-20,Compute Setup: AWS Review (Zhibin Lu),activity,10:30,""Time (ET)""",,,,,,
+"November 20,2025-11-20,Module 1 Lecture: Genome Assembly (Instructor: Jared Simpson),activity,11:00,""Time (ET)""",,,,,,
+"November 20,2025-11-20,Break (30min),break,12:00,""Time (ET)""",,,,,,
+"November 20,2025-11-20,Module 2 Lecture: Genome Annotation (Gary van Domselaar),activity,12:30,""Time (ET)""",,,,,,
+"November 20,2025-11-20,Lunch (1 hr),break,13:30,""Time (ET)""",,,,,,
+"November 20,2025-11-20,Module 2 Lab: Genome Annotation (Gary van Domselaar),activity,14:30,""Time (ET)""",,,,,,
+"November 20,2025-11-20,Break (30min),break,15:30,""Time (ET)""",,,,,,
+"November 20,2025-11-20,(contd) Module 2 Lab: Genome Annotation (Gary van Domselaar),activity,16:00,""Time (ET)""",,,,,,
+"November 20,2025-11-20,""Finished Optional: Integrative Assignment (TA)"",break,17:00,""Time (ET)""",,,,,,

@@ -31,7 +31,8 @@ bookdown::gitbook:
         <a href="https://www.ontariogenomics.ca/"><img src="img/sponsors/ontariogenomics.png" height="55" style="display:inline-block;" style="padding-bottom: 20px;" alt="Ontario Genomics logo.">
         <br><br>
         <a href="https://oicr.on.ca/"><img src="img/sponsors/oicr.png" width=35% style="display:inline-block;" style="padding-bottom: 20px" alt="Ontario Institute for Cancer Research logo.">
-        <a href="https://uhn.ca/"><img src="img/sponsors/uhnlogo.png" width=35% style="display:inline-block;" style="padding-bottom: 20px" alt="University Health Network logo.">
+        <br><br>
+        <a href="https://uhn.ca/"><img src="img/sponsors/uhnlogo.png" width=55% style="display:inline-block;" style="padding-bottom: 20px" alt="University Health Network logo.">
 
     edit: https://github.com/bioinformaticsdotca/MIG-2511/blob/main/%s
 
