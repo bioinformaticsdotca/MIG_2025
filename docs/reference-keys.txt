@@ -4,6 +4,13 @@ pre-work
 class-photo
 schedule
 meet-your-faculty
+andrew-mcarthur
+fiona-brinkman
+gary-van-domselaar
+jared-simpson
+jimmy-liu
+rob-beiko
+william-hsiao
 data-and-compute-setup
 course-data-downloads
 compute-setup

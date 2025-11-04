@@ -12,3 +12,99 @@ LOCATION
 
 BIO GOES HERE-->
 
+#### Andrew McArthur
+
+<img src="./img/faculty/andrew-mcarthur.jpg" width="200" alt="Photo of Andrew McArthur">
+
+>Professor
+Michael G. DeGroote Institute for Infectious Disease Research
+Department of Biochemistry and Biomedical Sciences
+<br>
+McMaster University <br>
+Hamilton, ON, Canada
+>
+> --- 
+
+Dr. McArthur is a Professor and David Braley Chair in Computational Biology at McMaster University. Dr. McArthur has had a career in the United States and Canada, including NIH-funded positions at the Marine Biological Laboratory and Brown University, where he led the genome assembly of the diarrheal pathogen Giardia intestinalis, plus 10 years of experience in the private sector. Dr. McArthur’s research team focuses on building tools, databases, and algorithms for the genomic surveillance of infectious pathogens. He and his team developed the Comprehensive Antibiotic Resistance Database (card.mcmaster.ca) and the SARS-CoV-2 Illumina GeNome Assembly Line software platform
+
+
+#### Fiona Brinkman
+
+<img src="./img/faculty/fiona-brinkman.png" width="200" alt="Photo of Fiona Brinkman">
+
+>Distinguished Professor, FRSC, Department of Molecular Biology and Biochemistry; 
+Associate Member, School of Computing Science and Faculty of Health Sciences
+<br>
+Simon Fraser University <br>
+Burnaby, BC, Canada
+>
+> --- brinkman@sfu.ca, https://www.brinkmanlab.ca/
+
+Dr. Brinkman is developing bioinformatic resources to better track infectious diseases using genomic data, and improve prediction of new vaccine/drug targets. Her primary aim is to develop more sustainable, integrated approaches for infectious disease control, however she is also applying her methods to aid allergy, child health, and environmental research.
+
+
+#### Gary Van Domselaar
+
+<img src="./img/faculty/gary-vandomselaar.png" width="200" alt="Photo of Gary Van Domselaar">
+
+>Chief, Bioinformatics
+National Microbiology Laboratory
+<br>
+Public Health Agency of Canada <br>
+Winnipeg, MB, Canada
+>
+> --- gary.vandomselaar@phac-aspc.gc.ca
+
+Dr. Gary Van Domselaar, PhD (University of Alberta, 2003) is the Chief of the Bioinformatics Section at the National Microbiology Laboratory in Winnipeg Canada and Associate Professor in the Department of Medical Microbiology and Infectious Diseases at the University of Manitoba. Dr. Van Domselaar’s lab develops bioinformatics methods and pipelines to understand, track, and control circulating infectious diseases in Canada and globally. His research and development
+
+#### Jared Simpson
+
+<img src="./img/faculty/jared-simpson.png" width="200" alt="Photo of Jared Simpson">
+
+>Principal Investigator, Ontario Institute for Cancer Research
+Assistant Prof. Department of Computer Science, University of Toronto
+<br>
+Toronto, ON, Canada
+>
+> --- https://simpsonlab.github.io/
+
+Dr. Simpson develops algorithms and software for the analysis of high-throughput sequencing data. He is interested in de novo assembly and the detection of sequence variation in individuals, cancers and populations, with a focus on long read sequencing technologies. Dr. Simpson developed the ABYSS, SGA and nanopolish  software packages.
+
+
+#### Jimmy Liu 
+
+<img src="./img/faculty/MISSINGHEADSHOT.png" width="200" alt="Photo of Jimmy Liu">
+
+>Coming soon
+<br>
+Coming soon <br>
+Canada
+>
+> --- https://simpsonlab.github.io/
+
+BIO 
+
+#### Rob Beiko
+
+<img src="./img/faculty/rob-beiko.png" width="200" alt="Photo of Rob Beiko">
+
+>Professor, Faculty of Computer Science
+<br>
+Dalhousie University <br>
+Halifax, NS, Canada
+>
+> --- rbeiko@dal.ca
+
+Rob Beiko is a professor in bioinformatics whose research encompasses microbial evolution and gene transfer, comparative genomics, and microbial community analysis. He is the lead of the ARETE project, which is developing a software pipeline for annotation of AMR and mobile genetic elements, phylogenomic analysis, and inference of recombination and transfer in large sets of pathogen genomes. He has also developed and contributed to software tools including STAMP for statistical analysis of metagenome profiles, rSPR for efficient inference of gene transmission, and PICRUSt for the prediction of metagenome composition based on marker-gene surveys.
+
+#### William Hsiao
+
+<img src="./img/faculty/william-hsiao.jpg" width="200" alt="Photo of William Hsiao">
+
+>Associate Professor, Faculty of Health Sciences
+<br>
+Simon Fraser University <br>
+>Vancouver, BC, Canada
+> --- wwhsiao@sfu.ca, www.cidgoh.ca
+
+William Hsiao is a public health infectious disease researcher with a background in microbial genomics and bioinformatics. He is an associate professor in the Faculty of Health Sciences at Simon Fraser University and an affiliated researcher at BCCDC Public Health Laboratory and at Canada’s Michael Smith Genome Sciences Centre. Will leads an interdisciplinary group of researchers interested in solving practical public health and animal health problems through a One Health lens at the Centre for Infectious Disease Genomics and One Health.
