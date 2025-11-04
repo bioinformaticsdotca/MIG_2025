@@ -2,7 +2,7 @@ day_label,date,activity,type,time_1,timezone_1_label,time_2,timezone_2_label
 November 20,2025-11-20,Zoom Opens,activity,06:45,"Time (PT)",09:45,"Time (ET)"
 November 20,2025-11-20,"Welcome (Regional Coordinator)",activity,07:00,"Time (PT)",10:00,"Time (ET)"
 November 20,2025-11-20,Compute Setup: AWS Review (Zhibin Lu),activity,07:30,"Time (PT)",10:30,"Time (ET)"
-November 20,2025-11-20,Module 1 Lecture: Genome Assembly (Instructor: Jared Simpson),activity,08:00,"Time (PT)",11:00,"Time (ET)"
+November 20,2025-11-20,Module 1 Lecture: Microbial Genome Sequencing (Instructor: Jared Simpson),activity,08:00,"Time (PT)",11:00,"Time (ET)"
 November 20,2025-11-20,Break (30min),break,09:00,"Time (PT)",12:00,"Time (ET)"
 November 20,2025-11-20,Module 2 Lecture: Genome Annotation (Gary van Domselaar),activity,09:30,"Time (PT)",12:30,"Time (ET)"
 November 20,2025-11-20,Lunch (1 hr),break,10:30,"Time (PT)",13:30,"Time (ET)"
