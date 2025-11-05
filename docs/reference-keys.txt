@@ -27,3 +27,9 @@ lab-2
 module-4-mobile-genetic-elements
 lecture-3
 lab-3
+module-5-pan-genomis
+lecture-4
+lab-4
+module-6-phylogenetics
+lecture-5
+lab-5
