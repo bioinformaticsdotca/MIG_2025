@@ -1,6 +1,6 @@
 --- 
 title: "Microbial Genomics 2025"
-author: "Faculty: Jared Simpson, Gary van Domselaar, Andrew McArthur, Rob Beiko, Fiona Brinkman"
+author: "Faculty: Andrew McArthur, Fiona Brinkman, Gary van Domselaar, Jared Simpson, Jimmy Liu, Rob Beiko, William Hsiao, Charlie Barclay"
 date: "November 20-22, 2025"
 site: bookdown::bookdown_site
 documentclass: book
