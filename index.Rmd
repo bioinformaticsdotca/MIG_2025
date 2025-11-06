@@ -5,12 +5,12 @@ date: "November 20-22, 2025"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
-url: https://bioinformaticsdotca.github.io/MIG-2511/ 
+url: https://bioinformaticsdotca.github.io/MIG_2025/ 
 cover-image: img/bioinformatics_logo.png
 description: |
   Workshop website for the 2025 Microbial Genomics Canadian Bioinformatics Workshop
 link-citations: yes
-github-repo: bioinformaticsdotca/MIG-2511
+github-repo: bioinformaticsdotca/MIG_2025
 favicon: img/favicon.ico
 ---
 
