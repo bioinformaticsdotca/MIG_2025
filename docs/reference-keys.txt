@@ -11,6 +11,7 @@ jared-simpson
 jimmy-liu
 rob-beiko
 william-hsiao
+charlie-barclay
 data-and-compute-setup
 course-data-downloads
 compute-setup
@@ -27,7 +28,7 @@ lab-2
 module-4-mobile-genetic-elements
 lecture-3
 lab-3
-module-5-pan-genomis
+module-5-pan-genomics
 lecture-4
 lab-4
 module-6-phylogenetics

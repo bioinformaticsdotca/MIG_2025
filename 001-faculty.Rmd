@@ -108,3 +108,15 @@ Simon Fraser University <br>
 > --- wwhsiao@sfu.ca, www.cidgoh.ca
 
 William Hsiao is a public health infectious disease researcher with a background in microbial genomics and bioinformatics. He is an associate professor in the Faculty of Health Sciences at Simon Fraser University and an affiliated researcher at BCCDC Public Health Laboratory and at Canada’s Michael Smith Genome Sciences Centre. Will leads an interdisciplinary group of researchers interested in solving practical public health and animal health problems through a One Health lens at the Centre for Infectious Disease Genomics and One Health.
+
+#### Charlie Barclay
+
+<img src="./img/faculty/charlie-barclay.jpg" width="200" alt="Photo of Charlie Barclay">
+
+>MSc Graduate Student Researcher, Department of Physics and Astronomy
+<br>
+University of British Columbia <br>
+>Vancouver, BC, Canada
+> --- cbarcl01@mail.ubc.ca
+
+William Hsiao is a public health infectious disease researcher with a Charlie is an ontology curator at the Centre for Infectious Disease Genomics and One Health (CIDGOH), focusing on data standards for contextual data of genomic epidemiology, including wastewater surveillance. With five years of experience in data management, specializing in biodiversity and genomics data, she also actively contributes to the Public Health Alliance for Genomic Epidemiology (PHA4GE) and the Global Alliance for Genomics and Health (GA4GH).
