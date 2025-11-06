@@ -34,7 +34,7 @@ bookdown::gitbook:
         <br><br>
         <a href="https://uhn.ca/"><img src="img/sponsors/uhnlogo.png" width=55% style="display:inline-block;" style="padding-bottom: 20px" alt="University Health Network logo.">
 
-    edit: https://github.com/bioinformaticsdotca/MIG-2511/blob/main/%s
+    edit: https://github.com/bioinformaticsdotca/MIG_2025/blob/main/%s
 
     download: ["pdf", "epub"]
   number_sections: false
