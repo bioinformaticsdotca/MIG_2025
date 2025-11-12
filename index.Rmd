@@ -22,7 +22,13 @@ Welcome to the 2025 Microbial Genomics Canadian Bioinformatics Workshop webpage!
 
 ## Pre-work
 
-<!--[You can find your pre-work here.](LINK TO PREWORK)-->
+You can find your pre work here: 
+
+1. Please read [**2023 CARD DB publication**](./content-files/2023 CARD DB publication.pdf).
+2. Please read [**2023 CARDShark publication**](./content-files/2023 CARDShark publication.pdf).
+3. Please read [**2025 Bait Capture VERSION 2 publication**](./content-files/2025 Bait Capture VERSION 2 publication (CARPDM).pdf).
+4. Please read [**2025 CARD k-mers pre-print**](./content-files/2025 CARD k-mers pre-print.pdf).
+5. Please read [**2025 CZ-ID publication**](./content-files/2025 CZ-ID publication.pdf).
 
 ## Class Photo
 
