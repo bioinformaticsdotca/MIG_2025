@@ -22,6 +22,7 @@ Choose the download link matching your computer OS:
 
 > [!NOTE]  
 > If you run into "Bandage is damaged" error, open the terminal, navigate to location of the extracted folder and run `xattr -cr Bandage.app`
+>
 > For Mac users, you will need to move the `Bandage.app` folder to your Applications directory
 
 If the application runs successfully, you should expect to see the following window:
