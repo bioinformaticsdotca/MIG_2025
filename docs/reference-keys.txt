@@ -16,7 +16,7 @@ data-and-compute-setup
 course-data-downloads
 compute-setup
 part-modules
-module-1-genome-assembly
+module-1-microbial-genome-sequencing
 lecture
 lab
 module-2-genome-assembly-and-annotation

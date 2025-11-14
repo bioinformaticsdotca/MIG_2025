@@ -1,6 +1,6 @@
 # (PART) Modules {-}
 
-# Module 1 Genome Assembly
+# Module 1 Microbial Genome Sequencing
 
 ## Lecture
 
