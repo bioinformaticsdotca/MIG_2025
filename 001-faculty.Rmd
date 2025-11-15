@@ -30,7 +30,7 @@ Dr. McArthur is a Professor and David Braley Chair in Computational Biology at M
 
 #### Fiona Brinkman
 
-<img src="./img/faculty/fiona-brinkman.png" width="200" alt="Photo of Fiona Brinkman">
+<img src="./img/faculty/fiona-brinkman.jpg" width="200" alt="Photo of Fiona Brinkman">
 
 >Distinguished Professor, FRSC, Department of Molecular Biology and Biochemistry; 
 Associate Member, School of Computing Science and Faculty of Health Sciences
