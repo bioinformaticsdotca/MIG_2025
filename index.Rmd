@@ -29,6 +29,7 @@ You can find your pre work here:
 3. Please read [**2025 Bait Capture VERSION 2 publication**](./content-files/2025 Bait Capture VERSION 2 publication (CARPDM).pdf).
 4. Please read [**2025 CARD k-mers pre-print**](./content-files/2025 CARD k-mers pre-print.pdf).
 5. Please read [**2025 CZ-ID publication**](./content-files/2025 CZ-ID publication.pdf).
+6. To participate in the live coding in Module 5, please read and follow the instructions at [Module 5 Pre-Work](./content-files/Module 5 pre-work.md)
 
 ## Class Photo
 
