@@ -73,16 +73,16 @@ Dr. Simpson develops algorithms and software for the analysis of high-throughput
 
 #### Jimmy Liu 
 
-<img src="./img/faculty/MISSINGHEADSHOT.png" width="200" alt="Photo of Jimmy Liu">
+<img src="./img/faculty/jimmy-liu.png" width="200" alt="Photo of Jimmy Liu">
 
->Coming soon
+>PhD Candidate, Simon Fraser University
 <br>
-Coming soon <br>
+Burnaby, BC <br>
 Canada
 >
-> --- https://simpsonlab.github.io/
+> --- ccl40@sfu.ca
 
-BIO 
+Jimmy Liu is a PhD candidate trained in bioinformatics and biochemistry. He conducted his PhD research at Simon Fraser University focusing on the development of novel computational methods to enhance the utility of WGS data for enteric outbreak investigations and longitudinal surveillance. He also has years of experience working with nanopore long-read technologies in the context of veterinary diagnostics, such as expediting diagnostic turnaround times through real-time nanopore data analysis.
 
 #### Rob Beiko
 
