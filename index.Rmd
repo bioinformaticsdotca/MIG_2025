@@ -1,4 +1,4 @@
---- 
+---
 title: "Microbial Genomics 2025"
 author: "Faculty: Andrew McArthur, Fiona Brinkman, Gary van Domselaar, Jared Simpson, Jimmy Liu, Rob Beiko, William Hsiao, Charlie Barclay"
 date: "November 20-22, 2025"
@@ -14,26 +14,26 @@ github-repo: bioinformaticsdotca/MIG_2025
 favicon: img/favicon.ico
 ---
 
-# (PART) Introduction {-}
+# (PART) Introduction {.unnumbered}
 
 # Workshop Info
 
-Welcome to the 2025 Microbial Genomics Canadian Bioinformatics Workshop webpage!  
+Welcome to the 2025 Microbial Genomics Canadian Bioinformatics Workshop webpage!
 
 ## Pre-work
 
-You can find your pre work here: 
+You can find your pre work here:
 
-1. Please read [**2023 CARD DB publication**](./content-files/2023 CARD DB publication.pdf).
-2. Please read [**2023 CARDShark publication**](./content-files/2023 CARDShark publication.pdf).
-3. Please read [**2025 Bait Capture VERSION 2 publication**](./content-files/2025 Bait Capture VERSION 2 publication (CARPDM).pdf).
-4. Please read [**2025 CARD k-mers pre-print**](./content-files/2025 CARD k-mers pre-print.pdf).
-5. Please read [**2025 CZ-ID publication**](./content-files/2025 CZ-ID publication.pdf).
-6. To participate in the live coding in Module 5, please read and follow the instructions at [**Module 5 Pre-Work**](./content-files/Module 5 pre-work.md).
+1.  Please read [**2023 CARD DB publication**](./content-files/2023%20CARD%20DB%20publication.pdf).
+2.  Please read [**2023 CARDShark publication**](./content-files/2023%20CARDShark%20publication.pdf).
+3.  Please read [**2025 Bait Capture VERSION 2 publication**](./content-files/2025%20Bait%20Capture%20VERSION%202%20publication%20(CARPDM).pdf).
+4.  Please read [**2025 CARD k-mers pre-print**](./content-files/2025%20CARD%20k-mers%20pre-print.pdf).
+5.  Please read [**2025 CZ-ID publication**](./content-files/2025%20CZ-ID%20publication.pdf).
+6.  To participate in the live coding in Module 5, please read and follow the instructions at [**Module 5 Pre-Work**](./content-files/Module%205%20pre-work.md).
 
 ## Class Photo
 
-Coming soon! 
+Coming soon!
 
 ## Schedule
 
