@@ -27,7 +27,7 @@ This tutorial has three parts. In the first two parts we explore two tools for m
 - **MOB-suite (command line)** — for plasmid prediction (Part 1)  
 - **IslandCompare (online)** — for genomic island prediction (Part 2)
 
-Additionally, RGI predictions were generated using the **ARETE** pipeline. With these results, we will perform interactive visualization with **Microreact**. (Part 3)
+Additionally, RGI predictions were generated using the [ARETE pipeline](https://github.com/beiko-lab/arete). With these results, we will perform interactive visualization with **Microreact**. (Part 3)
 
 Estimated time: ~20 minutes per part.
 
@@ -146,6 +146,7 @@ to see the output files. You should see the following:
 -	contig_report.txt: assignment information for each contig
 -	mge.report.txt: information about signature genes of mobile genetic elements (insertion sequences, etc)
 -	mobtyper_results.txt: various typing statistics including reference plasmid IDs and accessions
+
 Coming back to our original questions:
 -	How many plasmids are there? That is simply the number of ‘plasmid_’ FASTA files that are returned by MOB-suite.
 
@@ -212,20 +213,18 @@ Once you have finished exploring the complement of GIs in these genomes you can 
 ## Part 3: Microreact
 Parts 1 and 2 both give you results that can be interpreted as presence/absence values across a given set of genomes: these are often referred to as phylogenetic profiles. These profiles are useful because features (plasmids, genes, etc) with similar presence and absence distributions may have something else in common: function, genomic localization, etc. There are a million caveats on this, but that’s the basic idea. In Part 3 we will investigate and compare the distribution of several sets of features to see if we can find any links.
 
-Microreact (https://microreact.org/) is a platform that supports the visualization of phylogenomic data, particularly in the context of genomic epidemiology. The strength of Microreact is in its ability to integrate phylogenetic, temporal, geographic, and contextual information about pathogen isolates. There are many impressive data visualization examples on the front page; here we will use their visualization environment to examine the distribution of an “interesting” subset of features in the isolates related by our phylogenetic tree.
-
-Here, we will use Microreact to explore the distribution of a set of features predicted from our 45 Salmonella genomes. We will use it to explore questions such as:
+Microreact (https://microreact.org/) is a platform that supports the visualization of phylogenomic data, particularly in the context of genomic epidemiology. The strength of Microreact is in its ability to integrate phylogenetic, temporal, geographic, and contextual information about pathogen isolates. There are many impressive data visualization examples on the front page; here we will use their visualization environment to examine the distribution of an “interesting” subset of features in the isolates related by our phylogenetic tree. We will use Microreact to explore questions about our *Salmonella* genomes, such as:
 -	Can we identify any similarities in distribution that might imply some kind of functional or other connection?
 -	Can we see such linkages between different types of features?
 
 ### Inputs
-To carry out this analysis, we need two files. The first is a .tsv file that contains a matrix where the rows are genomes, and each column represents a feature predicted by either MOB-suite, IslandCompare, or RGI. A ‘0’ in the matrix means that this feature is absent from the corresponding genome, whereas a ‘1’ indicates its presence.
+To carry out this analysis, we need two files. The first is a .tsv file that contains a matrix where the rows are genomes, and each column represents a feature predicted by either MOB-suite, IslandCompare, or the Resistance Gene Identifier (that's this afternoon!). A ‘0’ in the matrix means that this feature is absent from the corresponding genome, whereas a ‘1’ indicates its presence.
 
-Matrix file: Here is how I generated the ‘MicroReactMatrix.tsv’ file:
+**Matrix file**: Here is how I generated the ‘MicroReactMatrix.tsv’ file:
 -	Format the three sets of outputs into three tab-separated files (RGI, MOB-suite, IslandCompare) with column1 = genome ID and column2 = feature name. Each row indicates the presence of one feature in one genome.
 -	Used a Python script to merge these files into the matrix file.
 
-Note that I generated the RGI predictions in the same ARETE run I used to produce the phylogenetic tree you will upload into MicroReact.
+I used our [ARETE pipeline](https://github.com/beiko-lab/arete) to generate the RGI predictions and the phylogenetic tree you will upload into Microreact.
 
 I used an additional filter to include only features that are present in between 3 and 43 out of the 45 genomes. Why? At the lower end, one-offs (or two-offs) aren’t super-interesting for identifying interesting distributions of feature combinations across our tree. Also, there are a LOT of them so cutting them out reduces the size of our matrix and makes the rest easier to work with. Similarly, features that are present in all or nearly all genomes again have kinda uninteresting distributions, and can be misleading if they represent consistent false positives across the entire set. So I removed any feature that was present in 1, 2, 44, or 45 genomes.
 
@@ -240,7 +239,7 @@ Retrieve the matrix and tree file from the course Github page.
 
 ### Using Microreact
 
-Do:
+**Do:**
 
 Navigate to https://microreact.org/upload
 
@@ -259,14 +258,17 @@ We can adjust all manner of things by clicking on the slider button, which bring
 I recommend you start with the “Nodes & Labels” button to change the appearance to your liking. 
 
 Now, select “Metadata blocks”. You will have the option to select one or more attributes, or all of them if you like. Start by turning them all on (except for “Genome ID”, which is not very informative!).
+- MOB-suite identifiers have two letters followed by three numbers, e.g. "AA474"
+- IslandCompare identifiers start with "SPI-", for "*Salmonella* Pathogenicity Island"
+- RGI uses gene names: sometimes these follow the standard nomenclature (e.g., "*emrA*"), and sometimes they don't. Sometimes they REALLY don't.  
 
 By default the colour scheme is green for absent and yellow for present. We can adjust this by clicking the three horizontal lines next to the slider icon and choosing “Edit Tree”. Click on “Metadata” in the resulting window, select any column, click on “Categorical” and you’ll be able to choose a custom palette.
 
 Back to those questions:
--	Can we identify any similarities in distribution that might imply some kind of functional or other connection? An obvious one is the mdsABC genes: turns out these are subunits of an antibiotic efflux pump (https://card.mcmaster.ca/ontology/37169) so that makes sense. 
--	Can we see such linkages between different types of features? If you keep looking you might notice that many other attributes show a similar distribution pattern to the mds genes. This may or may not be meaningful, though! Can you think of a reason why we might see similar distributional patterns for different features that have no functional connection to one another?
+-	Can we identify any similarities in distribution that might imply some kind of functional or other connection? An obvious one is the *mdsABC* genes: turns out these are subunits of an antibiotic efflux pump (https://card.mcmaster.ca/ontology/37169) so that makes sense. 
+-	Can we see such linkages between different types of features? If you keep looking you might notice that many other attributes show a similar distribution pattern to the _mds_ genes. This may or may not be meaningful, though! Can you think of a reason why we might see similar distributional patterns for different features that have no functional connection?
 
-Finally, if you stare long enough you might see some negative correlations among features. Understanding these can involve a deep and fascinating dive into the literature (or maybe you discovered a new association!)
+Understanding these patterns of correlation can involve a deep and fascinating dive into the literature (or maybe you discovered a new association!)
 
 ## References
 Bertelli C, Gray KL, Woods N, Lim AC, Tilley KE, Winsor GL, Hoad GR, Roudgar A, Spencer A, Peltier J, Warren D. Enabling genomic island prediction and comparison in multiple genomes to investigate bacterial evolution and outbreaks. Microbial genomics. 2022 May 18;8(5):000818.
@@ -282,18 +284,26 @@ Robertson J, Nash JH. MOB-suite: software tools for clustering, reconstruction a
 Treangen TJ, Ondov BD, Koren S, Phillippy AM. The Harvest suite for rapid core-genome alignment and visualization of thousands of intraspecific microbial genomes. Genome biology. 2014 Nov;15:1-5.
 
 ## Appendix
-Websites:
 NCBI Datasets: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
+
 MOB-suite Github repo: https://github.com/phac-nml/mob-suite
+
 MOB-suite database download link: https://zenodo.org/records/10304948/files/data.tar.gz?download=1 
+
 IslandCompare: https://islandcompare.ca/
+
 Microreact: https://microreact.org/
 
-Command for downloading Salmonella genomes in .fna format for MOB-suite (this is all one line):
+Command for downloading *Salmonella* genomes in .fna format for MOB-suite:
+
 `datasets summary genome taxon "Salmonella" --assembly-level complete --limit 100 | jq '.reports[] | select(.assembly_stats.number_of_contigs != 1) | .accession + " Contigs:" + (.assembly_stats.number_of_contigs|tostring)' | sed "s/\"\(.*\) .*/datasets download genome accession \1 --filename \1.zip/" | sh`
-Command for downloading Salmonella genomes in .gbff format for IslandCompare:
+
+Command for downloading *Salmonella* genomes in .gbff format for IslandCompare:
+
 `datasets summary genome taxon "Salmonella" --assembly-level complete --limit 100 | jq '.reports[] | select(.assembly_stats.number_of_contigs != 1) | .accession + " Contigs:" + (.assembly_stats.number_of_contigs|tostring)' | sed "s/\"\(.*\) .*/datasets download genome accession \1 --include gbff --filename \1.gbff.zip/"  | sh`
+
 I followed the instructions on the NCBI documentation page to set up the required conda environment.
 
 In case you’re interested, column 11 contains the RefSeq accessions for the plasmids in the reference cluster. You can look at these by pasting one of the IDs into the search bar at the NCBI home page and following the links. For example, if I paste ‘NC_013284’ I get a 22,448 bp plasmid from Cronobacter turicensis, similar but not identical.
+
 Novel plasmids: Predicted plasmids that do not match sufficiently well to any in the reference database will be assigned a label of 'novel_' followed by an md5 hash. These can provide useful avenues of further investigation but will not be consistent between runs.
