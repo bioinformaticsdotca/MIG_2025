@@ -148,6 +148,16 @@ interdisciplinary group of researchers interested in solving practical
 public health and animal health problems through a One Health lens at
 the Centre for Infectious Disease Genomics and One Health.
 
+#### Zhibin Lu
+
+<img src="./img/faculty/zhibin-lu.jpg" alt="Photo of Zhibin Lu" width="200"/>
+
+> Senior Manager, Digital Research <br> University Health Network
+> <br> Toronto, ON, Canada ---
+> [zhibin\@gmail.com](mailto:zhibin@gmail.com){.email}
+
+Zhibin Lu is a senior manager at University Health Network Digital. He is responsible for UHN HPC operations and scientific software. He manages two HPC clusters at UHN, including system administration, user management, and maintenance of bioinformatics tools for HPC4health. He is also skilled in Next-Gen sequence data analysis and has developed and maintained bioinformatics pipelines at the Bioinformatics and HPC Core. He is a member of the Digital Research Alliance of Canada Bioinformatics National Team and Scheduling National Team.
+
 #### Charlie Barclay
 
 <img src="./img/faculty/charlie-barclay.jpg" alt="Photo of Charlie Barclay" width="200"/>

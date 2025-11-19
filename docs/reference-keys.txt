@@ -11,6 +11,7 @@ jared-simpson
 jimmy-liu
 rob-beiko
 william-hsiao
+zhibin-lu
 charlie-barclay
 data-and-compute-setup
 course-data-downloads
