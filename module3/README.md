@@ -8,7 +8,7 @@
 ## Contents
 - [Overview](#overview)
 - [Dataset](#dataset)
-- [Part 1: MOB-suite](#Part-1-MOB-suite)
+- [Part 1: MOB-suite](#Part-1-mob-suite)
   - [Activate the environment](#activate-the-environment)
   - [Extract the genome files](#extract-the-genome-files)
   - [Let’s predict some plasmids!](#lets-predict-some-plasmids)
@@ -29,9 +29,16 @@ This tutorial has three parts. In the first two parts we explore two tools for m
 
 Additionally, RGI predictions were generated using the [ARETE pipeline](https://github.com/beiko-lab/arete). With these results, we will perform interactive visualization with **Microreact**. (Part 3)
 
+By the end of this tutorial, you will be able to do the following:
+- Run MOB-suite to generate plasmid predictions from input sequence files.
+- Generate, visualize, and interpret genomic island predictions in IslandCompare.
+- Upload data to Microreact and examine the phylogenetic distribution of different types of predicted genomic features.
+
 Estimated time: ~20 minutes per part.
 
 "**Do:**" indicates actions you should perform.
+
+
 
 ---
 
@@ -65,23 +72,27 @@ Questions to answer:
 - How large are they?  
 - What is their predicted host range?  
 
-### Activate the environment. 
+### Activate the environment
 To run MOB-suite, you first need to activate the Mamba environment on the server. You do this with the following command:
 
 **Do:**
 
-`mamba activate mob_suite3`
+```
+mamba activate mob_suite3
+```
 
 (capitalization and underscores matter!)
 
 You can check the availability of the MOB-suite tools by typing in `mob_` and hitting <tab> twice; this should bring up the four tools at your disposal.
 
-### Extract the genome files.
+### Extract the genome files
 If you’d like to have a go at a genome, you’ll want to extract an .fna file to work with. First, you can list the files in the archive:
 
 **Do:**
 
-`tar tfz Module3-SalmonellaGenomes.tar.gz`
+```
+tar tfz Module3-SalmonellaGenomes.tar.gz
+```
 
 Instead of extracting everything from the archive, choose a single genome to work with. You have two options:
 
@@ -91,7 +102,9 @@ Choose the genome with the ID 'GCF_003325255' as your example.
 
 **Do:** 
 
-`tar xvfz Module3-SalmonellaGenomes.tar.gz GCF_003325255.1/GCF_003325255.1_ASM332525v1_genomic.fna` 
+```
+tar xvfz Module3-SalmonellaGenomes.tar.gz GCF_003325255.1/GCF_003325255.1_ASM332525v1_genomic.fna
+```
 
 The corresponding directory is 'GCF_003325255.1' (the '.1' is the version number of the assembly in RefSeq).
 
@@ -100,15 +113,18 @@ Choose a genome at random by listing the directories in a shuffled order and tak
 
 **Do:** 
 
-`tar xvfz Module3-SalmonellaGenomes.tar.gz "$(tar tzf Module3-SalmonellaGenomes.tar.gz | shuf -n 1)"` 
+```
+tar xvfz Module3-SalmonellaGenomes.tar.gz "$(tar tzf Module3-SalmonellaGenomes.tar.gz | shuf -n 1)"
+```
 
 This will give you a single directory with your lucky match. When doing a test run of the tutorial I landed on ‘GCF_001831985.2’ so I will use that in the commands below, but please substitute your directory/genome file. 
 
 **Now Do:**
 
-`cd GCF_001831985.2`
-
-`ls -l *.fna`
+```
+cd GCF_001831985.2
+ls -l *.fna
+```
 
 There’s your genome!
 
@@ -118,13 +134,17 @@ There are two programs that are relevant to us here: `mob_recon` and `mob_typer`
 
 **Do:**
 
-`mob_recon --help`
+```
+mob_recon --help
+```
 
 This will list a dizzying array of options, including different sets of source files and various similarity / distance / coverage thresholds for deciding where to assign a contig. We could play with some of these settings to watch plasmids come and go, but we’re just going to use the default parameters.
 
 **Do:**
 
-`mob_recon --infile GCF_001831985.2_ASM183198v2_genomic.fna --outdir results`
+```
+mob_recon --infile GCF_001831985.2_ASM183198v2_genomic.fna --outdir results
+```
 
 (substituting your genome name as appropriate)
 
@@ -136,25 +156,28 @@ This sets the process in motion – it will likely take a couple of minutes to c
 
 When the run finishes, **Do:**
 
-`cd results/`
-
-`ls -l`
+```
+cd results/
+ls -l
+```
 
 to see the output files. You should see the following:
 -	One (chromosome) and possibly more (plasmid) FASTA-formatted files
--	biomarkers.blast.txt: biomarkers identified in the plasmids
--	contig_report.txt: assignment information for each contig
--	mge.report.txt: information about signature genes of mobile genetic elements (insertion sequences, etc)
--	mobtyper_results.txt: various typing statistics including reference plasmid IDs and accessions
+-	`biomarkers.blast.txt`: biomarkers identified in the plasmids
+-	`contig_report.txt`: assignment information for each contig
+-	`mge.report.txt`: information about signature genes of mobile genetic elements (insertion sequences, etc)
+-	`mobtyper_results.txt`: various typing statistics including reference plasmid IDs and accessions
 
 Coming back to our original questions:
 -	How many plasmids are there? That is simply the number of ‘plasmid_’ FASTA files that are returned by MOB-suite.
 
-We can answer our next questions by looking at mobtyper.results.txt. This file has a header line, followed by one line per predicted plasmid. There are over 20 fields (which are documented on the MOB-suite website), but we can quickly hone in on the ones we want by using the cut command:
+We can answer our next questions by looking at `mobtyper.results.txt`. This file has a header line, followed by one line per predicted plasmid. There are over 20 fields (which are documented on the MOB-suite website), but we can quickly hone in on the ones we want by using the cut command:
 
 **Do:**
 
-`cut -f1,2,3,14,18,19,20,21 mobtyper_results.txt`
+```
+cut -f1,2,3,14,18,19,20,21 mobtyper_results.txt
+```
 
 Here we’re asking for specific columns from a tab-separated file. This command gives us the sample ID, number of contigs associated with the plasmid, the size of the plasmid in nucleotides, predicted mobility, primary cluster ID, predicted host range (taxonomic rank), and predicted host range (taxonomic group). For my genome, there is one plasmid with the following statistics:
 -	Number of contigs: 1
@@ -220,7 +243,7 @@ Microreact (https://microreact.org/) is a platform that supports the visualizati
 ### Inputs
 To carry out this analysis, we need two files. The first is a .tsv file that contains a matrix where the rows are genomes, and each column represents a feature predicted by either MOB-suite, IslandCompare, or the Resistance Gene Identifier (that's this afternoon!). A ‘0’ in the matrix means that this feature is absent from the corresponding genome, whereas a ‘1’ indicates its presence.
 
-**Matrix file**: Here is how I generated the ‘MicroReactMatrix.tsv’ file:
+**Matrix file**: Here is how I generated the `MicroReactMatrix.tsv` file:
 -	Format the three sets of outputs into three tab-separated files (RGI, MOB-suite, IslandCompare) with column1 = genome ID and column2 = feature name. Each row indicates the presence of one feature in one genome.
 -	Used a Python script to merge these files into the matrix file.
 
@@ -233,9 +256,11 @@ Tree file: You can use any phylogenetic analysis tool you like to generate a ref
 -	Builds a concatenated reference alignment that includes all these core genes;
 -	Uses Fasttree (Price et al., 2010) to build an unrooted phylogenetic tree from this alignment.
 
+The result is the file `core_gene_alignment.tre`.
+
 **Do**:
 
-Retrieve the matrix and tree file from the course Github page.
+Retrieve the matrix and tree file from the [course Github page](https://github.com/bioinformaticsdotca/MIG_2025/tree/main/module3).
 
 ### Using Microreact
 
