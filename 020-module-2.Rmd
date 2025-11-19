@@ -7,4 +7,4 @@
 
 ## Lab
 
-[MIG_2025_Module2 Lab – Genome Assembly and Annotation with Proksee.pdf](https://drive.google.com/file/d/1cIAQZxajgI6dg4ZOX45X9DN5zcBGrD4h/view)
+<iframe src="https://drive.google.com/file/d/1cIAQZxajgI6dg4ZOX45X9DN5zcBGrD4h/preview" width="640" height="480" allow="autoplay"></iframe> 
