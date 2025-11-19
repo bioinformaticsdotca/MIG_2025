@@ -1,4 +1,3 @@
-# NOTE: This tutorial is currently being ported over from a different format. It is a work in progress.
 # CBW MIG 2025: Tutorial 3 – Mobile Genetic Elements
 
 **November 21, 2025**
