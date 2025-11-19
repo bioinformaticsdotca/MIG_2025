@@ -206,50 +206,76 @@ Once you have finished exploring the complement of GIs in these genomes you can 
 
 ---
 
-## Part 3: Microreact {#part-3-microreact}
+## Part 3: Microreact
 Parts 1 and 2 both give you results that can be interpreted as presence/absence values across a given set of genomes: these are often referred to as phylogenetic profiles. These profiles are useful because features (plasmids, genes, etc) with similar presence and absence distributions may have something else in common: function, genomic localization, etc. There are a million caveats on this, but that’s the basic idea. In Part 3 we will investigate and compare the distribution of several sets of features to see if we can find any links.
+
 Microreact (https://microreact.org/) is a platform that supports the visualization of phylogenomic data, particularly in the context of genomic epidemiology. The strength of Microreact is in its ability to integrate phylogenetic, temporal, geographic, and contextual information about pathogen isolates. There are many impressive data visualization examples on the front page; here we will use their visualization environment to examine the distribution of an “interesting” subset of features in the isolates related by our phylogenetic tree.
+
 Here, we will use Microreact to explore the distribution of a set of features predicted from our 45 Salmonella genomes. We will use it to explore questions such as:
 -	Can we identify any similarities in distribution that might imply some kind of functional or other connection?
 -	Can we see such linkages between different types of features?
+
 ### Inputs
 To carry out this analysis, we need two files. The first is a .tsv file that contains a matrix where the rows are genomes, and each column represents a feature predicted by either MOB-suite, IslandCompare, or RGI. A ‘0’ in the matrix means that this feature is absent from the corresponding genome, whereas a ‘1’ indicates its presence.
+
 Matrix file: Here is how I generated the ‘MicroReactMatrix.tsv’ file:
 -	Format the three sets of outputs into three tab-separated files (RGI, MOB-suite, IslandCompare) with column1 = genome ID and column2 = feature name. Each row indicates the presence of one feature in one genome.
 -	Used a Python script to merge these files into the matrix file.
+
 Note that I generated the RGI predictions in the same ARETE run I used to produce the phylogenetic tree you will upload into MicroReact.
+
 I used an additional filter to include only features that are present in between 3 and 43 out of the 45 genomes. Why? At the lower end, one-offs (or two-offs) aren’t super-interesting for identifying interesting distributions of feature combinations across our tree. Also, there are a LOT of them so cutting them out reduces the size of our matrix and makes the rest easier to work with. Similarly, features that are present in all or nearly all genomes again have kinda uninteresting distributions, and can be misleading if they represent consistent false positives across the entire set. So I removed any feature that was present in 1, 2, 44, or 45 genomes.
+
 Tree file: You can use any phylogenetic analysis tool you like to generate a reference tree for comparative purposes. I used the phylogenomic analysis pipeline in ARETE, which does the following:
 -	Uses the PpanGOLiN software (Gautreau et al., 2020) to identify core genes present in all or nearly all of the input genomes;
 -	Builds a concatenated reference alignment that includes all these core genes;
 -	Uses Fasttree (Price et al., 2010) to build an unrooted phylogenetic tree from this alignment.
-Do:
+
+**Do**:
+
 Retrieve the matrix and tree file from the course Github page.
-Using Microreact
+
+### Using Microreact
+
 Do:
+
 Navigate to https://microreact.org/upload
+
 Drag the tree file and matrix file onto the page. Microreact should correctly recognize the format of these files. Click “Continue”.
+
 You will then be prompted to adjust properties of the data table if you wish. You need to confirm that “genome_id” is indeed the correct ID column. You can also change the datatype of different attributes and choose different colour schemes.
 Click “Continue”.
+
 You should now see two panels: a phylogenetic tree at the top, and the metadata frame (i.e., the matrix) at the bottom. Like the tree IslandCompare generated for us, this tree is unrooted. 
 -	For the sake of aesthetics I recommend you right-click on the canvas and select “Midpoint Root”. 
 -	Things can get crowded in the tree view; you can focus on a more manageable set by right-clicking on an edge and selecting “View subtree”.
 -	You can reset everything by right-clicking on the canvas and selecting “Redraw Original Tree”.
-We can adjust all manner of things by clicking on the slider button:   This will bring up options to change the tree visualization, show metadata, and muck around with the node/label visuals.
+
+We can adjust all manner of things by clicking on the slider button, which brings up options to change the tree visualization, show metadata, and muck around with the node/label visuals.
+
 I recommend you start with the “Nodes & Labels” button to change the appearance to your liking. 
+
 Now, select “Metadata blocks”. You will have the option to select one or more attributes, or all of them if you like. Start by turning them all on (except for “Genome ID”, which is not very informative!).
+
 By default the colour scheme is green for absent and yellow for present. We can adjust this by clicking the three horizontal lines next to the slider icon and choosing “Edit Tree”. Click on “Metadata” in the resulting window, select any column, click on “Categorical” and you’ll be able to choose a custom palette.
+
 Back to those questions:
 -	Can we identify any similarities in distribution that might imply some kind of functional or other connection? An obvious one is the mdsABC genes: turns out these are subunits of an antibiotic efflux pump (https://card.mcmaster.ca/ontology/37169) so that makes sense. 
 -	Can we see such linkages between different types of features? If you keep looking you might notice that many other attributes show a similar distribution pattern to the mds genes. This may or may not be meaningful, though! Can you think of a reason why we might see similar distributional patterns for different features that have no functional connection to one another?
+
 Finally, if you stare long enough you might see some negative correlations among features. Understanding these can involve a deep and fascinating dive into the literature (or maybe you discovered a new association!)
 
 ## References
 Bertelli C, Gray KL, Woods N, Lim AC, Tilley KE, Winsor GL, Hoad GR, Roudgar A, Spencer A, Peltier J, Warren D. Enabling genomic island prediction and comparison in multiple genomes to investigate bacterial evolution and outbreaks. Microbial genomics. 2022 May 18;8(5):000818.
+
 Gautreau G, Bazin A, Gachet M, Planel R, Burlot L, Dubois M, Perrin A, Médigue C, Calteau A, Cruveiller S, Matias C. PPanGGOLiN: depicting microbial diversity via a partitioned pangenome graph. PLoS computational biology. 2020 Mar 19;16(3):e1007732.
+
 Price MN, Dehal PS, Arkin AP. FastTree 2–approximately maximum-likelihood trees for large alignments. PloS one. 2010 Mar 10;5(3):e9490.
+
 Robertson J, Bessonov K, Schonfeld J, Nash JH. Universal whole-sequence-based plasmid typing and its utility to prediction of host range and epidemiological surveillance. Microbial Genomics. 2020 Oct;6(10):e000435.
+
 Robertson J, Nash JH. MOB-suite: software tools for clustering, reconstruction and typing of plasmids from draft assemblies. Microbial genomics. 2018 Aug;4(8):e000206.
+
 Treangen TJ, Ondov BD, Koren S, Phillippy AM. The Harvest suite for rapid core-genome alignment and visualization of thousands of intraspecific microbial genomes. Genome biology. 2014 Nov;15:1-5.
 
 ## Appendix
