@@ -163,33 +163,45 @@ Here we’re asking for specific columns from a tab-separated file. This command
 ---
 
 ## Part 2: IslandCompare
-IslandCompare is a software package and online tool for prediction and visualization of genomic islands (GIs). The software uses a combination of tools to generate GI predictions; you can investigate subsets of predictions or consider them all, and download results locally.
+IslandCompare is a software package and online tool for prediction and visualization of genomic islands (GIs) developed by Fiona Brinkman, Kristen Gray, and others. The software uses a combination of tools to generate GI predictions; you can investigate subsets of predictions or consider them all, and download results locally.
 
 In this section, we will ask the following questions:
--	How dense is the coverage of genomic islands in our Salmonella genomes?
+-	How dense is the coverage of genomic islands in our *Salmonella* genomes?
 -	What is the balance between predicted versus curated genomic islands?
 -	How well conserved is genomic island order and content across the genomes?
 -	How conserved is gene content within genomic islands?
 -	Which GIs show evidence of AMR genes and other signature elements?
-To avoid bombing the IslandCompare server, I have uploaded all 45 genomes and generated the complete set of predictions. You can see these by following the link below.
+
+To avoid hammering the IslandCompare server and to keep us to time, I have uploaded all 45 genomes along with two subsets and generated complete sets of predictions. You can see these by following the link below.
 
 Note that IslandCompare requires Genbank-formatted flat files (.gbff), which contain gene annotations as well as sequences. Those are not included in the package of files on the student instance but the command 
 I used to retrieve them is given at the end of this document.
 
-**Navigate to** https://islandcompare.ca/analysis?id=9d05ae20-0caf-11ef-8455-fd7d6262f3b3
+**Navigate to** [https://islandcompare.ca/analysis?id=9d05ae20-0caf-11ef-8455-fd7d6262f3b3](https://islandcompare.ca/history?id=9d05ae20-0caf-11ef-8455-fd7d6262f3b3)
 
-You may need to click on the “recent jobs” tab to access the *Salmonella* genomes.
+This will default to the "Analyze" page. If you click on the "PROJECTS" tab on the left-hand side of the screen you will see three projects, each with their own associated datasets:
+- MIG-2025: The full set of 45 genomes.
+- MIG-2025-SIMILAR: Eight closely related genomes sampled from the larger set.
+- MIG-2025-DIVERSE: Eight more-distantly related genomes.
+
+In principle I could have used a single project and done all three analyses based on the same source files, but it was easier in this case to have the subset files as separate projects.
+
+For each project, the right-hand side of the screen will show you the full list of uploaded genomes. You can generate specific analyses by selecting any set or subset of these genomes, optionally uploading a phylogenetic tree, and clicking "Submit". We will not do this right now, but you can try it later using the uploaded datasets.
 
 **Do:**
 
-Click on Visualize on the right-hand side of the screen. This will bring you to the visualization page, where each genome is shown as a horizontal line, with a SNP tree constructed using ParSNP (Treangen et al., 2014) relating the genomes to each other on the left. The default view has genomic islands that are likely to be homologous assigned the same colour (that’s the “compare” part of IslandCompare).
+Navigate to the Job History page. This page shows you the completion status and lets you visualize and analyze the analysis results. The "All" dataset is more than we need, so we will focus on the "Diverse" and "Similar" subsets and see how their conservation differs. Click on Visualize on the right-hand side of the screen. This will bring you to the visualization page (not surprisingly), where each genome is shown as a horizontal line, with a SNP tree constructed using ParSNP (Treangen et al., 2014) relating the genomes to each other on the left. The default view has genomic islands that are likely to be homologous assigned the same colour (that’s the “compare” part of IslandCompare).
+
 Hovering over a predicted island will also highlight related islands in other genomes, which immediately gives you a sense of the phylogenetic distribution of any island, as well as similarity in length and relative position in the genome.
 
 **Do** the following:
 -	Drag a rectangle over some region of the genome alignment to zoom into that part of the genomes. If you zoom in closely enough you can see individual annotated genes.
 -	Switch from “Colour genes by similarity” to “Colour genes by predictor”. By choosing different predictive tools you can investigate the total number and length of islands predicted by IslandPath, Sigi-HMM, and BLAST, as well as the manually curated islands.
 -	Click on a genomic island to view a close-up of it and its putative homologs in other genomes on a new page. See if you can find GIs with length variations or inversions relative to others.
--	Note that the phylogenetic tree is unrooted. Click on “Toggle Branches” and you might be able to make a pretty guess as to where the root of the tree should lie. This might help explain some of the phylogenetic distributions of islands you are seeing as well.
+-	Note that the phylogenetic tree is an unrooted cladogram, which shows relationships but lacks informative branch lengths. Click on “Toggle Branches” and you might be able to make a pretty good guess as to where the root of the tree should lie. The degrees of relatedness might help explain some of the phylogenetic distributions of islands you are seeing as well.
+
+You should see some significant differences in conservation between the two subsets: with greater variation in GI presence and orientation in the Diverse set. Viewing the Diverse set in IslandCompare provides an excellent qualitative view of how lateral gene transfer impacts the diversity and functional capabilities of *Salmonella*.
+
 Once you have finished exploring the complement of GIs in these genomes you can download the predictions as text files or a publication-quality image.
 
 ---
