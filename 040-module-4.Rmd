@@ -18,7 +18,7 @@
 
 ### Download Files {#download}
 
-If you are doing this demo live, you can download all the files we will be viewing [here](/module4/downloads_for_demo).
+If you are doing this demo live, you can download all the files we will be viewing [here](module4/downloads_for_demo).
 
 
 ### Introduction {#intro}
