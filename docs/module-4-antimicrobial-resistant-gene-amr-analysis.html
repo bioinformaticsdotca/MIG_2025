@@ -269,7 +269,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <div id="download" class="section level3 hasAnchor">
 <h3>Download Files<a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#download" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If you are doing this demo live, you can download all the files we will be viewing <a href="module4/downloads_for_demo">here</a>.</p>
+<p>If you are doing this demo live, you can download all the files we will be viewing <a href="https://github.com/bioinformaticsdotca/MIG_2025/tree/main/module4/downloads_for_demo">here</a>.</p>
 </div>
 <div id="intro" class="section level3 hasAnchor">
 <h3>Introduction<a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#intro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -338,7 +338,7 @@ Answers:
 <ul>
 <li>Resistome prediction for the multidrug resistant <em>Acinetobacter baumannii</em> MDR-TJ, complete genome (NC_017847).</li>
 <li>Resistome prediction for the plasmid isolated from <em>Escherichia coli</em> strain MRSN388634 plasmid (KX276657).</li>
-<li>Explain the difference in fluoroquinolone resistance MIC between two clinical strains of <em>Pseudomonas aeruginosa</em> that appear clonal based on identical MLST (<a href="/module4/sequences_for_web_demo"><code>Pseudomonas1.fasta</code>, <code>Pseudomonas2.fasta</code></a> - these files can be found in this GitHub repo). Hint, look at SNPs.</li>
+<li>Explain the difference in fluoroquinolone resistance MIC between two clinical strains of <em>Pseudomonas aeruginosa</em> that appear clonal based on identical MLST (<a href="https://github.com/bioinformaticsdotca/MIG_2025/tree/main/module4/sequences_for_web_demo"><code>Pseudomonas1.fasta</code>, <code>Pseudomonas2.fasta</code></a> - these files can be found in this GitHub repo). Hint, look at SNPs.</li>
 </ul>
 <details>
 <summary>
@@ -367,7 +367,7 @@ Answers:
 <span id="cb4-4"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb4-4" tabindex="-1"></a><span class="fu">less</span> card.json</span>
 <span id="cb4-5"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb4-5" tabindex="-1"></a><span class="ex">rgi</span> load <span class="at">--card_json</span> ./card.json <span class="at">--local</span></span>
 <span id="cb4-6"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb4-6" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
-<p>We don’t have time to analyze all 39 samples, so let’s analyze 1 as an example (the course GitHub repo contains an EXCEL version of the resulting <a href="/module4/rgi_main_results/ED010.xlsx">ED010.txt</a> file). When analyzing FASTA files we use the <strong>main</strong> sub-command, here with default settings “<strong>Perfect and Strict hits only</strong>”, “<strong>Exclude nudge</strong>”, and “<strong>High quality/coverage</strong>”:</p>
+<p>We don’t have time to analyze all 39 samples, so let’s analyze 1 as an example (the course GitHub repo contains an EXCEL version of the resulting <a href="https://github.com/bioinformaticsdotca/MIG_2025/tree/main/module4/rgi_main_results">ED010.txt</a> file). When analyzing FASTA files we use the <strong>main</strong> sub-command, here with default settings “<strong>Perfect and Strict hits only</strong>”, “<strong>Exclude nudge</strong>”, and “<strong>High quality/coverage</strong>”:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb5-1" tabindex="-1"></a><span class="ex">rgi</span> main <span class="at">-h</span></span>
 <span id="cb5-2"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb5-2" tabindex="-1"></a><span class="ex">rgi</span> main <span class="at">-i</span> ~/CourseData/module4/ecoli/ED010.fasta <span class="at">-o</span> ED010 <span class="at">-t</span> contig <span class="at">-a</span> DIAMOND <span class="at">-n</span> 4 <span class="at">--local</span> <span class="at">--clean</span></span>
 <span id="cb5-3"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb5-3" tabindex="-1"></a><span class="fu">ls</span></span>
@@ -380,7 +380,7 @@ Discussion Points:
 </summary>
 <p>Default RGI <strong>main</strong> analysis of ED010 lists 12 Perfect annotations and 38 Strict annotations. Yet, 41 annotations are efflux components common in <em>E. coli</em> that may or may not lead to clinical levels of AMR. Nonetheless, outside of efflux there are some antibiotic inactivation and target alteration genes, but only EC beta-lactamase is notable. This isolate is primarily resistant to fluoroquinolone, aminocoumarin, macrolide, and tetracycline antibiotics, although the acrD gene can also contribute resistance to aminoglycosides.</p>
 </details>
-<p>What if these results did not explain our observed phenotype? We might want to explore the RGI Loose hits (the course GitHub repo contains an EXCEL version of the resulting <a href="/module4/rgi_main_results/ED010_IncludeLoose.xlsx">ED010_IncludeLoose.txt</a> file), shown here with settings “<strong>Perfect, Strict, and Loose hits</strong>”, “<strong>Include nudge</strong>”, and “<strong>High quality/coverage</strong>”:</p>
+<p>What if these results did not explain our observed phenotype? We might want to explore the RGI Loose hits (the course GitHub repo contains an EXCEL version of the resulting <a href="https://github.com/bioinformaticsdotca/MIG_2025/tree/main/module4/rgi_main_results">ED010_IncludeLoose.txt</a> file), shown here with settings “<strong>Perfect, Strict, and Loose hits</strong>”, “<strong>Include nudge</strong>”, and “<strong>High quality/coverage</strong>”:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb6-1" tabindex="-1"></a><span class="ex">rgi</span> main <span class="at">-h</span></span>
 <span id="cb6-2"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb6-2" tabindex="-1"></a><span class="ex">rgi</span> main <span class="at">-i</span> ~/CourseData/module4/ecoli/ED010.fasta <span class="at">-o</span> ED010_IncludeLoose <span class="at">-t</span> contig <span class="at">-a</span> DIAMOND <span class="at">-n</span> 4 <span class="at">--local</span> <span class="at">--clean</span> <span class="at">--include_nudge</span> <span class="at">--include_loose</span></span>
 <span id="cb6-3"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb6-3" tabindex="-1"></a><span class="fu">ls</span></span>
@@ -391,7 +391,7 @@ Discussion Points:
 </summary>
 <p>An additional 10 nudged Strict annotations (possible partial genes for <em>Escherichia coli</em> emrE, EF-Tu mutants conferring resistance to Pulvomycin, and AcrF) and 396 Loose annotations have been added to investigate for leads that could explain the observed phenotype. Note this scenario is unlikely for clinical isolates given CARD’s reference data, but is possible for environmental isolates. The multiple putative gene fragments found via the Nudge may suggest genome assembly problems.</p>
 </details>
-<p>We have pre-compiled results for all 39 samples under “<strong>Perfect and Strict hits only</strong>”“,”<strong>Exclude nudge</strong>”, and “<strong>High quality/coverage</strong>”, so let’s try RGI’s heat map tool (<a href="/module4/rgi_main_results">pre-compiled images</a> can be downloaded or viewed from the course GitHub repo):</p>
+<p>We have pre-compiled results for all 39 samples under “<strong>Perfect and Strict hits only</strong>”“,”<strong>Exclude nudge</strong>”, and “<strong>High quality/coverage</strong>”, so let’s try RGI’s heat map tool (<a href="https://github.com/bioinformaticsdotca/MIG_2025/tree/main/module4/rgi_main_results">pre-compiled images</a> can be downloaded or viewed from the course GitHub repo):</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb7-1" tabindex="-1"></a><span class="fu">ls</span> ~/CourseData/module4/ecoli_json</span>
 <span id="cb7-2"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb7-2" tabindex="-1"></a><span class="ex">rgi</span> heatmap <span class="at">-h</span></span>
 <span id="cb7-3"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb7-3" tabindex="-1"></a><span class="ex">rgi</span> heatmap <span class="at">-i</span> ~/CourseData/module4/ecoli_json <span class="at">-o</span> heatmap</span>
@@ -409,7 +409,7 @@ Discussion Points:
 </details>
 <p><a name="microreact"></a>
 ## Integration with Microreact</p>
-<p>You can use the following annotation file to visualize all of the RGI results in the context of <a href="https://microreact.org">Microreact</a> visualizations of a phylogenetic tree of these isolates: <a href="/module4/for_microreact">RGI microreact results plus earlier derived whole genome SNP tree</a>.</p>
+<p>You can use the following annotation file to visualize all of the RGI results in the context of <a href="https://microreact.org">Microreact</a> visualizations of a phylogenetic tree of these isolates: <a href="https://github.com/bioinformaticsdotca/MIG_2025/tree/main/module4/for_microreact">RGI microreact results plus earlier derived whole genome SNP tree</a>.</p>
 <p>Notes on the metadata:
 * We include RGI Perfect and Strict annotations, but ignore Loose annotations
 * We are ignoring all efflux results
@@ -420,7 +420,7 @@ Discussion Points:
 <div id="rgimerged" class="section level3 hasAnchor">
 <h3>RGI for Merged Metagenomic Reads<a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#rgimerged" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The standard RGI tool can be used to analyze metagenomics read data, but only for assembled or merged reads with Prodigal calling of partial open reading frames (ORFs). Here we will demonstrate analysis of merged reads. This is a computationally expensive approach, since each merged read set may contain a partial ORF, requiring RGI to perform massive amounts of BLAST/DIAMOND analyses. While computationally intensive (and thus generally not recommended), this does allow analysis of metagenomic sequences in protein space, including key substitutions, overcoming issues of high-stringency read mapping relative to nucleotide reference databases.</p>
-<p>Lanza et al. (<a href="https://www.ncbi.nlm.nih.gov/pubmed/29335005">Microbiome 2018, 15:11</a>) used AMR gene bait capture to sample human gut microbiomes for AMR genes. Using the <a href="https://card.mcmaster.ca/analyze/rgi">online RGI</a> under “<strong>Perfect, Strict and Loose hits</strong>”, “<strong>Include nudge</strong>”, and “<strong>Low quality/coverage</strong>” settings, analyze the first 500 merged metagenomic reads from their analysis (file <a href="/module4/sequences_for_web_demo/ResCap_first_500.fasta"><code>ResCap_first_500.fasta</code></a>). Take a close look at the predicted “sul” genes in the results table. How good is the evidence for these AMR genes in this enriched metagenomics sample?</p>
+<p>Lanza et al. (<a href="https://www.ncbi.nlm.nih.gov/pubmed/29335005">Microbiome 2018, 15:11</a>) used AMR gene bait capture to sample human gut microbiomes for AMR genes. Using the <a href="https://card.mcmaster.ca/analyze/rgi">online RGI</a> under “<strong>Perfect, Strict and Loose hits</strong>”, “<strong>Include nudge</strong>”, and “<strong>Low quality/coverage</strong>” settings, analyze the first 500 merged metagenomic reads from their analysis (file <a href="https://github.com/bioinformaticsdotca/MIG_2025/tree/main/module4/sequences_for_web_demo"><code>ResCap_first_500.fasta</code></a>). Take a close look at the predicted “sul” genes in the results table. How good is the evidence for these AMR genes in this enriched metagenomics sample?</p>
 <details>
 <summary>
 Discussion Points:
@@ -445,7 +445,7 @@ Discussion Points:
 <p>RGI <strong>bwt</strong> produces a LOT of output files, see the details at the <a href="https://github.com/arpcard/rgi/blob/master/docs/rgi_bwt.rst">RGI GitHub repo</a>. First, let’s look at the summary statistics:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb11-1" tabindex="-1"></a><span class="fu">cat</span> gut_sample.kma.overall_mapping_stats.txt</span>
 <span id="cb11-2"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb11-2" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
-<p>However, the file we are most interested in for now is <a href="/module4/rgi_bwt_results/gut_sample.kma.gene_mapping_data.xlsx"><code>gut_sample.kma.gene_mapping_data.txt</code></a> and the course GitHub repo contains an EXCEL version for easy viewing, but let’s look at it on the command line:</p>
+<p>However, the file we are most interested in for now is <a href="https://github.com/bioinformaticsdotca/MIG_2025/tree/main/module4/rgi_bwt_results"><code>gut_sample.kma.gene_mapping_data.txt</code></a> and the course GitHub repo contains an EXCEL version for easy viewing, but let’s look at it on the command line:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb12-1" tabindex="-1"></a><span class="ex">column</span> <span class="at">-t</span> <span class="at">-s</span> <span class="st">$&#39;</span><span class="dt">\t</span><span class="st">&#39;</span> gut_sample.kma.gene_mapping_data.txt  <span class="kw">|</span> <span class="fu">less</span> <span class="at">-S</span></span>
 <span id="cb12-2"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb12-2" tabindex="-1"></a><span class="fu">cut</span> <span class="at">-f</span> 1 gut_sample.kma.gene_mapping_data.txt <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-u</span> <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span>
 <span id="cb12-3"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb12-3" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
@@ -494,7 +494,7 @@ Answers:
 </blockquote>
 <div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb14-1" tabindex="-1"></a><span class="ex">rgi</span> bwt <span class="at">-1</span> ~/CourseData/module4/gut_sample/gut_R1.fastq <span class="at">-2</span> ~/CourseData/module4/gut_sample/gut_R2.fastq <span class="at">-a</span> kma <span class="at">-n</span> 4 <span class="at">-o</span> gut_sample_wildcard.kma <span class="at">--local</span> <span class="at">--include_wildcard</span></span>
 <span id="cb14-2"><a href="module-4-antimicrobial-resistant-gene-amr-analysis.html#cb14-2" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
-<p>The pre-compiled results can be viewed in the EXCEL version of <a href="/module4/rgi_bwt_results/gut_sample_wildcard.kma.gene_mapping_data.xlsx"><code>gut_sample_wildcard.kma.gene_mapping_data.txt</code></a> in the GitLab repo, but let’s first compare statistics, where you’ll see we aligned some additional reads:</p>
+<p>The pre-compiled results can be viewed in the EXCEL version of <a href="/https://github.com/bioinformaticsdotca/MIG_2025/tree/main/module4/rgi_bwt_results"><code>gut_sample_wildcard.kma.gene_mapping_data.txt</code></a> in the GitLab repo, but let’s first compare statistics, where you’ll see we aligned some additional reads:</p>
 <blockquote>
 <p>YOU CAN EXECUTE THESE COMMANDS AS WE HAVE PROVIDED PRE-COMPUTED RESULTS.</p>
 </blockquote>
