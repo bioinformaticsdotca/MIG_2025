@@ -8,7 +8,7 @@
 ## Contents
 - [Overview](#overview)
 - [Dataset](#dataset)
-- [Part 1: MOB-suite](#part-1-mob-suite)
+- [Part 1: MOB-suite](#Part 1: MOB-suite)
 - [Part 2: IslandCompare](#part-2-islandcompare)
 - [Part 3: Microreact](#part-3-microreact)
   - [Inputs](#inputs)
@@ -19,12 +19,12 @@
 ---
 
 ## Overview
-In this tutorial we explore two tools for mobile genetic element prediction:
+This tutorial has three parts. In the first two parts we explore two tools for mobile genetic element prediction:
 
-- **MOB-suite (command line)** — for plasmid prediction  
-- **IslandCompare (online)** — for genomic island prediction
+- **MOB-suite (command line)** — for plasmid prediction (Part 1)  
+- **IslandCompare (online)** — for genomic island prediction (Part 2)
 
-Additionally, RGI predictions were generated using the **ARETE** pipeline. With these results, we will perform interactive visualization with **Microreact**.
+Additionally, RGI predictions were generated using the **ARETE** pipeline. With these results, we will perform interactive visualization with **Microreact**. (Part 3)
 
 Estimated time: ~20 minutes per part.
 
@@ -33,7 +33,7 @@ Estimated time: ~20 minutes per part.
 ---
 
 ## Dataset
-Using NCBI Datasets, 45 *Salmonella* genomes were retrieved with requirements:
+Using NCBI Datasets, 45 *Salmonella* genomes were retrieved with the following requirements:
 
 1. Annotated as “complete”  
 2. Having at least two annotated contigs (to increase chance of plasmids)
@@ -43,8 +43,8 @@ Two key files in `module3-MGE`:
 - `Module3-SalmonellaGenomes.tar.gz` — all 45 genomes (.fna)  
 - `Module3-MOBsuite-example-GCF_003325255.tar.gz` — example MOB-suite results
 
-NCBI Datasets:  
-https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
+NCBI Datasets: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
+See the [Appendix](#appendix) for details on how the datasets were retrieved.
 
 ---
 
