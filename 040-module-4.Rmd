@@ -316,7 +316,7 @@ rgi bwt -1 ~/CourseData/module4/gut_sample/gut_R1.fastq -2 ~/CourseData/module4/
 ls
 ```
 
-The pre-compiled results can be viewed in the EXCEL version of [`gut_sample_wildcard.kma.gene_mapping_data.xlsx`](/https://github.com/bioinformaticsdotca/MIG_2025/tree/main/module4/rgi_bwt_results) in the GitLab repo, but let's first compare statistics, where you'll see we aligned some additional reads:
+The pre-compiled results can be viewed in the EXCEL version of [`gut_sample_wildcard.kma.gene_mapping_data.txt`](https://github.com/bioinformaticsdotca/MIG_2025/tree/main/module4/rgi_bwt_results) in the GitLab repo, but let's first compare statistics, where you'll see we aligned some additional reads:
 
 > YOU CAN EXECUTE THESE COMMANDS AS WE HAVE PROVIDED PRE-COMPUTED RESULTS.
 
