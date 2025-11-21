@@ -82,7 +82,7 @@ mamba activate mob_suite3
 
 (capitalization and underscores matter!)
 
-You can check the availability of the MOB-suite tools by typing in `mob_` and hitting <tab> twice; this should bring up the four tools at your disposal.
+You can check the availability of the MOB-suite tools by typing in `mob_` and hitting tab twice; this should bring up the four tools at your disposal.
 
 ### Extract the genome files
 If you’d like to have a go at a genome, you’ll want to extract an .fna file to work with. First, you can list the files in the archive:
