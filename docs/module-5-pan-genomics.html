@@ -271,8 +271,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Module 5 Pan Genomics<a href="module-5-pan-genomics.html#module-5-pan-genomics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="lecture-4" class="section level2 hasAnchor">
 <h2>Lecture<a href="module-5-pan-genomics.html#lecture-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<!--<iframe src="https://docs.google.com/presentation/d/1rcvBqeI_MPNxEHqZV4TAPU-9-wHNy2xi/preview" width="640" height="480" allow="autoplay"></iframe> 
--->
+<iframe src="https://drive.google.com/file/d/1zK0fx2fenJjUdTPVRA29rcp5ZMr_ckC3/preview" width="640" height="480" allow="autoplay">
+</iframe>
 </div>
 <div id="lab-3" class="section level2 hasAnchor">
 <h2>Lab<a href="module-5-pan-genomics.html#lab-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -318,11 +318,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="visualize-cdbg-in-bandage" class="section level4 hasAnchor">
 <h4>Visualize cDBG in Bandage<a href="module-5-pan-genomics.html#visualize-cdbg-in-bandage" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>To visualize the output graph (.GFA) constructed by <code>Bifrost</code>, you will need <code>Bandage</code> installed on your own computer (Not on the server!). You can find the installation guide <a href="https://github.com/jimmyliu1326/CBW_MIG_2025/blob/main/docs/prework.md">here</a></p>
-<p>For Bandage to access the output files, the files need to be transferred to your local device, which can be done using <code>scp</code></p>
+<p>For Bandage to access the output files, the files need to be transferred to your local device. All files generated on the server can be downloaded by navigating to <code>http://##.uhn-hpc.ca/</code> (Replace ## with your assigned node number!)</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="module-5-pan-genomics.html#cb27-1" tabindex="-1"></a><span class="co"># remember to decompress the .GFA file before transfer</span></span>
-<span id="cb27-2"><a href="module-5-pan-genomics.html#cb27-2" tabindex="-1"></a><span class="fu">gunzip</span> salmonella_k31.gfa.gz</span>
-<span id="cb27-3"><a href="module-5-pan-genomics.html#cb27-3" tabindex="-1"></a><span class="co"># copy GFA file remote location to local device</span></span>
-<span id="cb27-4"><a href="module-5-pan-genomics.html#cb27-4" tabindex="-1"></a><span class="fu">scp</span> server:/home/ubuntu/workspace/module5/salmonella_k31.gfa /path/to/local_dir/</span></code></pre></div>
+<span id="cb27-2"><a href="module-5-pan-genomics.html#cb27-2" tabindex="-1"></a><span class="fu">gunzip</span> salmonella_k31.gfa.gz</span></code></pre></div>
 <p>Now open the GFA file in <code>Bandage</code> and click [Draw Graph]. It should take a few seconds to render the graph.</p>
 </div>
 </div>

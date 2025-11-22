@@ -2,8 +2,8 @@
 
 ## Lecture
 
-<!--<iframe src="https://docs.google.com/presentation/d/1rcvBqeI_MPNxEHqZV4TAPU-9-wHNy2xi/preview" width="640" height="480" allow="autoplay"></iframe> 
--->
+<iframe src="https://drive.google.com/file/d/1zK0fx2fenJjUdTPVRA29rcp5ZMr_ckC3/preview" width="640" height="480" allow="autoplay"></iframe> 
+
 
 ## Lab
 *Developed by Jimmy Liu and William Hsiao*
