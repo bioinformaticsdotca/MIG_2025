@@ -31,9 +31,6 @@ You can find your pre work here:
 5.  Please read [**2025 CZ-ID publication**](./content-files/2025%20CZ-ID%20publication.pdf).
 6.  To participate in the live coding in Module 5, please read and follow the instructions at [**Module 5 Pre-Work**](./content-files/Module%205%20pre-work.md).
 
-## Class Photo
-
-Coming soon!
 
 ## Schedule
 
@@ -355,3 +352,16 @@ schedule_component <- tagList(
 # 7. Output the final component
 schedule_component
 ```
+
+## AWS Setup Instructions
+
+Note that some of these files are quite large. If you have issues downloading them, try copying the link address, opening a new blank tab, and entering the URL into the new tab’s address bar. If that fails, contact us at info@bioinformatics.ca.
+
+AWS Region: us-east-1 (N. Virgina) <br>
+AMI name: CBW_MIG_251117 <br>
+AMI ID: ami-0e32fdae1a358dbcb <br>
+
+https://hpc4health.ca/cbw/2025/MIG/MIG_module2.tar
+https://hpc4health.ca/cbw/2025/MIG/MIG_module3-MGE.tar
+https://hpc4health.ca/cbw/2025/MIG/MIG_module4.tar
+https://hpc4health.ca/cbw/2025/MIG/MIG_module5.tar
