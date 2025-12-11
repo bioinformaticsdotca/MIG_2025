@@ -1,5 +1,7 @@
 # Module 4 Antimicrobial Resistant Gene (AMR) Analysis 
 
+<iframe width="640" height="360" src="https://www.youtube.com/embed/OXwLQmg7xUg?si=JXIqlAJCbGh6keKL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Lecture
 <iframe src="https://drive.google.com/file/d/1koc2kciWtqzdavZz8ilwwI_ROWG8KZga/preview" width="640" height="480" allow="autoplay"></iframe> 
 
